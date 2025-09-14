@@ -1,0 +1,13 @@
+.body-class {
+        background-color: #8d8d8d;
+        display: flex;
+        margin: 0 auto;
+        height: 100vh;
+      }
+
+
+.play-button{
+    background-color: aqua;
+    height: fit-content;
+
+}
