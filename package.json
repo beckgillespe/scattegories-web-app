@@ -1,0 +1,17 @@
+{
+    "name": "scattegories",
+    "version": "1.0.0",
+    "description": "scattegories node js package for web development",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "start.dev": "nodemon",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "express": "^4.16.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    }
+}

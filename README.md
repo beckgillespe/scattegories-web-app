@@ -1,13 +1,29 @@
 # scattegories-web-app
 
-Just a few lines to get us familiar with webdev.  
-Test project for learning Git workflows and collaboration.
+# pre-requisites to run
 
----
+Docker Desktop - To allow us to build containers that host our node js http server. these containers are a
 
-# workflow examples
+# Workflow examples
 
-## 🪴 Creating a new branch
+0. hit **ctrl** + **shift** + **`**
+   _open Terminal OR POWERSHELL in VSCode_
+
+
+## Creating web app 
+
+
+1. `docker-compose build`
+   _build the docker image from the docker compose file and cache locally_
+
+2. `docker-compose run`
+   _run the cached image and get up local container_
+
+3. Navigate to http://localhost:8080/
+   _local address hosting our server_
+
+
+## Creating a new branch
 
 When you want to start working on a new feature or fix:
 
@@ -22,7 +38,7 @@ When you want to start working on a new feature or fix:
 
 ---
 
-## ✍️ Adding changes and pushing to remote
+## Adding changes and pushing to remote
 
 After making edits or adding new files:
 
@@ -41,7 +57,7 @@ After making edits or adding new files:
 
 ---
 
-## 🔄 Merging someone else's changes into your branch
+## Merging someone else's changes into your branch
 
 To stay up-to-date with changes from others (e.g., merged into master):
 
@@ -58,7 +74,7 @@ To stay up-to-date with changes from others (e.g., merged into master):
 
 ---
 
-## 🧹 Deleting a branch
+## Deleting a branch
 
 Once your work is merged and no longer needed:
 
@@ -76,5 +92,30 @@ optional- can also do on web ui
 4. `git push origin --delete your-branch-name`  
    _Delete the branch from the remote repository._
 
----
 
+# folder structure
+
+scattegories-web-app/
+├── node_modules/           # Installed dependencies
+├── public/                 # Static assets served directly
+│   ├── css/                # Stylesheets
+│   ├── js/                 # Frontend JavaScript files
+│   └── img/                # Images and icons
+├── src/                    # Application source code
+│   ├── routes/             # API and page route definitions
+│   ├── views/              # Templates for rendering HTML (e.g., EJS, Pug)
+│   └── server.js           # Express app setup
+├── .env                    # Environment variables
+├── .gitignore              # Git ignore rules
+├── Dockerfile              # Docker container setup
+├── docker-compose.yml      # Multi-container orchestration
+├── package.json            # Project metadata and scripts
+└── README.md               # Project documentation
+
+# libraries used
+
+nodemon -> watches all paths for cahnges to .js, .mjs and .json files and reloads server if files change
+
+express -> most standard http server for dynamic web development 
+
+ejs -> library for express, used to 
